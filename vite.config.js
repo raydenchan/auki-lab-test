@@ -7,6 +7,12 @@ const path = require('path')
 export default defineConfig({
   plugins: [vue()],
 
+  base: '',  
+
+  build: {
+    outDir: "dist/",
+  },
+
   resolve: {
     alias:{
       '@' : path.resolve( __dirname, './src')
