@@ -1,21 +1,21 @@
+
 $(document).ready(function(){
-    //console.log("page is ready");
-});
+
+    $("#secondaryMenuToggler").click(function(){
+        $('.sidemenu-overlay').show();
+        $('aside.sidemenu-wrapper').show();
+        $('aside.sidemenu-wrapper').removeClass('slide-out');
+        $('aside.sidemenu-wrapper').addClass('slide-in');
+        $('html').addClass('noscroll');
+    });
 
 
-/*
-$(document).on("scroll", function() {
-    var pageTop = $(document).scrollTop();
-    var pageBottom = pageTop + $(window).height();
-    var tags = $(".homepage-sc .content-wrap");
+    $("#secondaryMenuClose").click(function(){
+        $('.sidemenu-overlay').hide();
+        $('aside.sidemenu-wrapper').removeClass('slide-in');
+        $('aside.sidemenu-wrapper').addClass('slide-out');
+        $('html').removeClass('noscroll');
+    });
 
-    for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i];
 
-        if ($(tag).position().top < pageBottom) {
-        $(tag).addClass("visible");
-        } else {
-        $(tag).removeClass("visible");
-        }
-    }
-});*/
+})
